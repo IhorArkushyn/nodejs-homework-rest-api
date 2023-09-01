@@ -54,7 +54,7 @@ const { SECRET_KEY } = process.env;
 //   }
 // };
 
-const authentificate = async (req, _, next) => {
+const authenticate = async (req, _, next) => {
   const { authorization = "" } = req.headers;
   const [bearer, token] = authorization.split(" ");
   if (bearer !== "Bearer") {
@@ -73,4 +73,4 @@ const authentificate = async (req, _, next) => {
   }
 };
 
-module.exports = authentificate;
+module.exports = authenticate;

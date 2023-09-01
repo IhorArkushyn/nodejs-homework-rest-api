@@ -8,11 +8,6 @@ const emailRegexp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,8})+$/;
 const subscriptions = ["starter", "pro", "business"];
 const userSchema = new Schema(
   {
-    // name: {
-    //   type: String,
-    //   required: [true, "Name is required"],
-    //   unique: true,
-    // },
     password: {
       type: String,
       minlength: 6,
@@ -53,9 +48,15 @@ const loginSchema = Joi.object({
   password: Joi.string().min(6).required(),
 });
 
+const updateSubscriptionSchema = Joi.object({
+  subscription: Joi.string()
+    .valid(...subscriptions)
+    .required(),
+});
+
 const User = model("user", userSchema);
 
-const schemas = { registerSchema, loginSchema };
+const schemas = { registerSchema, loginSchema, updateSubscriptionSchema };
 
 module.exports = {
   User,
