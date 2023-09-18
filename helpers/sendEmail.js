@@ -21,9 +21,4 @@ const sendEmail = async (data) => {
   return true;
 };
 
-// transport
-//   .sendMail(email)
-//   .then(() => console.log("Verification email sent"))
-//   .catch((error) => console.log(error.message));
-
 module.exports = sendEmail;
