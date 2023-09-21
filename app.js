@@ -1,13 +1,3 @@
-// MongoDB PASSWORD zLLrRCWmDGEHUxHA;
-
-// const mongoose = require("mongoose");
-// const DB_HOST =
-//   "mongodb+srv://Ihor:zLLrRCWmDGEHUxHA@cluster0.jjt4sxx.mongodb.net/contacts_list?retryWrites=true&w=majority";
-// mongoose
-//   .connect(DB_HOST)
-//   .then(() => console.log("Database connection successful"))
-//   .catch((err) => console.log(err.message));
-// "Database connection successful";
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
